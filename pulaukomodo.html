@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pulau Komodo - REALTOUR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="foto/logoreal.jpg">
+    <style>
+        /* Banner */
+        .sub-banner {
+            background-color: #e60028;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            animation: fadeIn 1s ease-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .sub-banner h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        .sub-banner p {
+            font-size: 20px;
+            opacity: 0.9;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+        }
+
+        /* Detail layout */
+        .detail-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 60px;
+            padding: 80px 40px;
+            max-width: 1300px;
+            margin: auto;
+        }
+        .detail-image {
+            flex: 1;
+            min-width: 350px;
+            max-width: 500px;
+            position: sticky;
+            top: 20px;
+        }
+        .detail-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+            transition: transform 0.3s ease;
+        }
+        .detail-image img:hover {
+            transform: scale(1.02);
+        }
+        .detail-content {
+            flex: 2;
+            max-width: 700px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        .detail-content h2, .detail-content h3 {
+            color: #e60028;
+            border-bottom: 2px solid #e60028;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        .detail-content h3 {
+            margin-top: 35px;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+        }
+        .detail-content p {
+            font-size: 17px;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        .detail-content ul {
+            list-style: none;
+            padding-left: 0;
+            color: #444;
+            margin-bottom: 30px;
+        }
+        .detail-content ul li {
+            padding: 8px 0;
+            border-left: 3px solid #e60028;
+            padding-left: 15px;
+            margin-bottom: 5px;
+        }
+        .btn-book {
+            display: block;
+            max-width: 450px;
+            margin: 40px auto 10px;
+            background-color: #e60028;
+            color: white;
+            text-align: center;
+            padding: 18px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 22px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 6px 15px rgba(230,0,40,0.4);
+        }
+        .btn-book:hover {
+            background-color: #b3001f;
+            transform: translateY(-2px);
+        }
+        .btn-detail {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #e60028;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn-detail:hover {
+            background-color: #5a6268;
+        }
+        .source-info {
+            margin-top: 30px;
+            padding: 15px;
+            border-left: 5px solid #007bff;
+            background-color: #e6f0ff;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #555;
+        }
+        .source-info h2 {
+        font-size: 16px;
+        color: #007bff;
+        margin-top: 0;
+        margin-bottom: 5px;
+        border-bottom: none;
+        padding-bottom: 0;
+        }
+        .source-info a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .source-info a:hover {
+            color: #e60028;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <h1>REALTOUR <img src="foto/logoreal.jpg" alt="logo"></h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="nav-link">Beranda</a></li>
+            <li><a href="inspirasiwisata.html" class="nav-link">Destinasi Wisata</a></li>
+            <li><a href="wisatapopuler.html" class="nav-link">Wisata Populer</a></li>
+            <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="sub-banner">
+    <h1>Pulau Komodo</h1>
+    <p>Habitat asli kadal terbesar dunia dan gugusan pulau menakjubkan di Nusa Tenggara Timur.</p>
+</section>
+
+<main class="detail-container">
+    <div class="detail-image">
+        <img src="foto/pulaukomodo.jpg" alt="Pulau Komodo">
+    </div>
+    <div class="detail-content">
+        <h2>Tentang Pulau Komodo</h2>
+        <p>
+            Pulau Komodo adalah sebuah pulau yang terletak di Kepulauan Nusa Tenggara, Indonesia. 1  
+            Pulau ini terkenal sebagai habitat asli hewan Komodo, kadal terbesar di dunia. 3  
+            Secara administratif, Pulau Komodo termasuk wilayah Kabupaten Manggarai Barat, Provinsi Nusa Tenggara Timur. 5
+        </p>
+
+        <h3>Geografi & Habitat</h3>
+        <p>
+            Dengan luas sekitar 390 km², Pulau Komodo berada di sebelah timur Pulau Sumbawa, dipisahkan oleh Selat Sape. 6  
+            Pulau ini juga bagian dari Taman Nasional Komodo yang menjadi kawasan konservasi penting. 8
+        </p>
+
+        <h3>Sejarah & Pengakuan Dunia</h3>
+        <p>
+            Pulau Komodo dan kawasan sekitarnya diakui sebagai UNESCO World Heritage Site sebagai bagian dari taman nasional laut dan pulau-nya. 10  
+            Sejak awal abad ke-20, berbagai penelitian dan konservasi diarahkan untuk melindungi populasi komodo yang hidup di pulau ini. 11
+        </p>
+
+        <h3>Wisata & Aktivitas</h3>
+        <ul>
+            <li>Menjelajahi pulau dengan pemandu khusus karena habitat komodo yang dilindungi.</li>
+            <li>Snorkeling atau diving untuk menikmati keindahan terumbu karang di sekitar pulau.</li>
+            <li>Berfoto di bukit panorama atau pantai-pink yang termasuk dalam kawasan pulau Komodo.</li>
+        </ul>
+
+        <div class="source-info">
+            <h2>Sumber Informasi:</h2>
+            <p>Data diambil dari: <a href="https://id.wikipedia.org/wiki/Pulau_Komodo" target="_blank">Wikipedia - Pulau Komodo</a></p>
+        </div>
+
+        <a href="wisata alam.html" class="btn-detail">← Kembali ke Destinasi Alam</a>
+        <a href="kontak.html" class="btn-book">PESAN TUR PULAU KOMODO SEKARANG</a>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 REALTOUR | Petualangan Impian Dalam Genggaman</p>
+</footer>
+</body>
+</html>

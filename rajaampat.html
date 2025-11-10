@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kepulauan Raja Ampat - REALTOUR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="foto/logoreal.jpg">
+    <style>
+        .sub-banner {
+        background-color: #e60028;
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 100px 20px;
+        text-align: center;
+        animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .sub-banner h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .sub-banner p {
+        font-size: 20px;
+        opacity: 0.9;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    }
+    
+    /* ---------------------------------------------------- */
+    /* Halaman Detail Wisata */
+    .detail-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 60px; /* Jarak antar elemen utama lebih besar */
+        padding: 80px 40px; /* Padding lebih besar */
+        max-width: 1300px; /* Lebar maksimum untuk konten */
+        margin: auto;
+    }
+
+    .detail-image {
+        flex: 1;
+        min-width: 350px;
+        max-width: 500px;
+        position: sticky; /* Agar gambar tetap terlihat saat menggulir */
+        top: 20px;
+    }
+    
+    .detail-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px; /* Sudut lebih melengkung */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); /* Bayangan lebih dramatis */
+        transition: transform 0.3s ease;
+    }
+    
+    .detail-image img:hover {
+        transform: scale(1.02); /* Efek zoom ringan saat hover */
+    }
+
+    .detail-content {
+        flex: 2;
+        max-width: 700px;
+        text-align: left;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .detail-content h2, .detail-content h3 {
+        color: #e60028;
+        border-bottom: 2px solid #e60028;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+
+    .detail-content h2 {
+        font-size: 32px;
+    }
+
+    .detail-content h3 {
+        margin-top: 35px;
+        font-size: 24px;
+        color: #333; /* Warna lebih gelap untuk sub-judul */
+        border-bottom: 2px solid #ddd; /* Garis tipis untuk sub-judul */
+    }
+
+    .detail-content p {
+        font-size: 17px;
+        color: #555;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    .detail-content ul {
+        list-style: none; /* Hilangkan default disc */
+        padding-left: 0;
+        color: #444;
+        margin-bottom: 30px;
+    }
+    
+    .detail-content ul li {
+        padding: 8px 0;
+        border-left: 3px solid #e60028; /* Garis merah di samping list item */
+        padding-left: 15px;
+        margin-bottom: 5px;
+        transition: background-color 0.2s;
+    }
+    
+    .detail-content ul li:hover {
+        background-color: #fff0f0; /* Efek highlight saat hover */
+    }
+
+    .btn-book {
+        display: block;
+        width: 100%; /* Lebar penuh di dalam detail-content */
+        max-width: 450px;
+        margin: 40px auto 10px auto;
+        background-color: #e60028; /* Menggunakan warna utama REALTOUR */
+        color: white;
+        text-align: center;
+        padding: 18px 30px;
+        border-radius: 50px; /* Tombol berbentuk pil */
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: bold;
+        transition: background-color 0.3s, transform 0.2s;
+        box-shadow: 0 6px 15px rgba(230, 0, 40, 0.4);
+        letter-spacing: 1px;
+    }
+
+    .btn-book:hover {
+        background-color: #b3001f;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(230, 0, 40, 0.6);
+    }
+    
+    .btn-detail {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #e60028;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    
+    .btn-detail:hover {
+        background-color: #5a6268;
+    }
+
+    /* Media Queries untuk Responsif */
+    @media (max-width: 900px) {
+        .detail-container {
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            gap: 30px;
+        }
+
+        .detail-image {
+            max-width: 100%;
+            position: static; /* Hilangkan sticky di layar kecil */
+        }
+        
+        .sub-banner h1 {
+            font-size: 36px;
+        }
+    }
+    /* Gaya untuk Sumber Informasi */
+    .source-info {
+        margin-top: 30px;
+        padding: 15px;
+        border-left: 5px solid #007bff; /* Garis biru sebagai penanda informasi */
+        background-color: #e6f0ff; /* Latar belakang sangat lembut */
+        border-radius: 5px;
+        font-size: 14px;
+        color: #555;
+    }
+
+    .source-info h2 {
+        font-size: 16px;
+        color: #007bff;
+        margin-top: 0;
+        margin-bottom: 5px;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .source-info a {
+        color: #0056b3;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+    .source-info a:hover {
+        color: #e60028; /* Berubah menjadi warna utama REALTOUR saat hover */
+        text-decoration: underline;
+    }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <h1>REALTOUR <img src="foto/logoreal.jpg" alt="logo"></h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="inspirasiwisata.html">Destinasi Wisata</a></li>
+            <li><a href="wisatapopuler.html">Wisata Populer</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="sub-banner">
+    <h1>Kepulauan Raja Ampat</h1>
+    <p>Surga bahari dunia di ujung barat Papua dengan keanekaragaman hayati laut tertinggi di bumi.</p>
+</section>
+
+<main class="detail-container">
+    <div class="detail-image">
+        <img src="foto/rajaampat.jpg" alt="Kepulauan Raja Ampat">
+    </div>
+    <div class="detail-content">
+        <h2>Tentang Kepulauan Raja Ampat</h2>
+        <p>
+            Kepulauan Raja Ampat adalah gugusan kepulauan yang terletak di barat bagian Semenanjung Kepala Burung Papua, Indonesia. 
+            Secara administratif, wilayah ini termasuk dalam Provinsi Papua Barat Daya dan terdiri dari lebih dari 600 pulau besar dan kecil.
+            Empat pulau utamanya adalah Waigeo, Misool, Salawati, dan Batanta.
+        </p>
+        <p>
+            Luas wilayahnya mencapai sekitar 8.034 km² dengan populasi sekitar 64 ribu jiwa (sensus 2020). 
+            Kepulauan ini terkenal dengan ekosistem lautnya yang sangat kaya, menjadikannya salah satu lokasi penyelaman terbaik di dunia.
+        </p>
+
+        <h3>Kekayaan Alam dan Laut</h3>
+        <p>
+            Raja Ampat dikenal memiliki keanekaragaman hayati laut tertinggi di dunia. 
+            Tercatat lebih dari 1.500 spesies ikan, 600 jenis karang keras, dan 700 jenis moluska hidup di perairan ini. 
+            Terumbu karangnya termasuk yang paling sehat di dunia, menjadikannya pusat penelitian global tentang konservasi laut.
+        </p>
+
+        <h3>Sejarah dan Masyarakat</h3>
+        <p>
+            Nama "Raja Ampat" berasal dari legenda setempat tentang empat raja yang muncul dari telur naga dan memerintah di empat pulau utama.
+            Masyarakat setempat terdiri dari berbagai suku Melanesia dengan budaya yang sangat kaya, termasuk tarian tradisional dan musik tifa.
+        </p>
+
+        <h3>Pariwisata</h3>
+        <p>
+            Wisata di Raja Ampat berfokus pada kegiatan menyelam (diving), snorkeling, dan eksplorasi alam. 
+            Beberapa spot populer di antaranya Wayag, Piaynemo, Arborek, dan Misool. 
+            Selain panorama bawah laut, wisatawan juga dapat menikmati pemandangan karst yang spektakuler.
+        </p>
+
+        <h3>Akses Menuju Raja Ampat</h3>
+        <p>
+            Untuk menuju ke Raja Ampat, pengunjung biasanya terbang ke Sorong (Papua Barat Daya), kemudian melanjutkan perjalanan laut sekitar 2 jam ke Waisai, ibu kota Kabupaten Raja Ampat.
+        </p>
+
+        <div class="source-info">
+            <h2>Sumber Informasi:</h2>
+            <p>Data diambil dari: <a href="https://id.wikipedia.org/wiki/Kepulauan_Raja_Ampat" target="_blank">Wikipedia - Kepulauan Raja Ampat</a></p>
+        </div>
+
+        <a href="wisata alam.html" class="btn-detail">← Kembali ke Destinasi</a>
+        <a href="kontak.html" class="btn-book">PESAN TUR KERATON SEKARANG</a>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2025 REALTOUR | Petualangan Impian Dalam Genggaman</p>
+</footer>
+</body>
+</html>

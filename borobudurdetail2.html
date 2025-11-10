@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Candi Borobudur - REALTOUR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="foto/logoreal.jpg">
+    <style>
+
+    /* ---------------------------------------------------- */
+    /* Gaya Sub-Banner (Hero Section) */
+    .sub-banner {
+        background-color: #e60028;
+      
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 100px 20px;
+        text-align: center;
+        animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .sub-banner h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .sub-banner p {
+        font-size: 20px;
+        opacity: 0.9;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    }
+    
+    /* ---------------------------------------------------- */
+    /* Halaman Detail Wisata */
+    .detail-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 60px; /* Jarak antar elemen utama lebih besar */
+        padding: 80px 40px; /* Padding lebih besar */
+        max-width: 1300px; /* Lebar maksimum untuk konten */
+        margin: auto;
+    }
+
+    .detail-image {
+        flex: 1;
+        min-width: 350px;
+        max-width: 500px;
+        position: sticky; /* Agar gambar tetap terlihat saat menggulir */
+        top: 20px;
+    }
+    
+    .detail-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px; /* Sudut lebih melengkung */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); /* Bayangan lebih dramatis */
+        transition: transform 0.3s ease;
+    }
+    
+    .detail-image img:hover {
+        transform: scale(1.02); /* Efek zoom ringan saat hover */
+    }
+
+    .detail-content {
+        flex: 2;
+        max-width: 700px;
+        text-align: left;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .detail-content h2, .detail-content h3 {
+        color: #e60028;
+        border-bottom: 2px solid #e60028;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+    }
+
+    .detail-content h2 {
+        font-size: 32px;
+    }
+
+    .detail-content h3 {
+        margin-top: 35px;
+        font-size: 24px;
+        color: #333; /* Warna lebih gelap untuk sub-judul */
+        border-bottom: 2px solid #ddd; /* Garis tipis untuk sub-judul */
+    }
+
+    .detail-content p {
+        font-size: 17px;
+        color: #555;
+        line-height: 1.7;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+
+    .detail-content ul {
+        list-style: none; /* Hilangkan default disc */
+        padding-left: 0;
+        color: #444;
+        margin-bottom: 30px;
+    }
+    
+    .detail-content ul li {
+        padding: 8px 0;
+        border-left: 3px solid #e60028; /* Garis merah di samping list item */
+        padding-left: 15px;
+        margin-bottom: 5px;
+        transition: background-color 0.2s;
+    }
+    
+    .detail-content ul li:hover {
+        background-color: #fff0f0; /* Efek highlight saat hover */
+    }
+
+    .btn-book {
+        display: block;
+        width: 100%; /* Lebar penuh di dalam detail-content */
+        max-width: 450px;
+        margin: 40px auto 10px auto;
+        background-color: #e60028; /* Menggunakan warna utama REALTOUR */
+        color: white;
+        text-align: center;
+        padding: 18px 30px;
+        border-radius: 50px; /* Tombol berbentuk pil */
+        text-decoration: none;
+        font-size: 22px;
+        font-weight: bold;
+        transition: background-color 0.3s, transform 0.2s;
+        box-shadow: 0 6px 15px rgba(230, 0, 40, 0.4);
+        letter-spacing: 1px;
+    }
+
+    .btn-book:hover {
+        background-color: #b3001f;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(230, 0, 40, 0.6);
+    }
+    
+    .btn-detail {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #e60028;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    
+    .btn-detail:hover {
+        background-color: #5a6268;
+    }
+
+    /* Media Queries untuk Responsif */
+    @media (max-width: 900px) {
+        .detail-container {
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            gap: 30px;
+        }
+
+        .detail-image {
+            max-width: 100%;
+            position: static; /* Hilangkan sticky di layar kecil */
+        }
+        
+        .sub-banner h1 {
+            font-size: 36px;
+        }
+    }
+    /* Gaya untuk Sumber Informasi */
+    .source-info {
+        margin-top: 30px;
+        padding: 15px;
+        border-left: 5px solid #007bff; /* Garis biru sebagai penanda informasi */
+        background-color: #e6f0ff; /* Latar belakang sangat lembut */
+        border-radius: 5px;
+        font-size: 14px;
+        color: #555;
+    }
+
+    .source-info h2 {
+        font-size: 16px;
+        color: #007bff;
+        margin-top: 0;
+        margin-bottom: 5px;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .source-info a {
+        color: #0056b3;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+    .source-info a:hover {
+        color: #e60028; /* Berubah menjadi warna utama REALTOUR saat hover */
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>REALTOUR <img src="foto/logoreal.jpg" alt="logo"></h1> 
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="inspirasiwisata.html" class="nav-link">Destinasi Wisata</a></li>
+                <li><a href="wisatapopuler.html" class="nav-link">Wisata Populer</a></li>
+                <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="sub-banner">
+        <h1>Candi Borobudur</h1>
+        <p>Warisan Dunia UNESCO – Mahakarya arsitektur Buddha terbesar di dunia.</p>
+    </section>
+
+    <main class="detail-container">
+        <div class="detail-image">
+            <img src="foto/borobudur.jpg" alt="Candi Borobudur">
+        </div>
+        
+        <div class="detail-content">
+            <h2>Tentang Candi Borobudur</h2>
+            <p>
+                Candi Borobudur terletak di Kabupaten Magelang, Jawa Tengah, Indonesia. 
+                Bangunan ini merupakan candi Buddha aliran Mahāyāna yang dibangun sekitar abad ke-8 hingga ke-9 oleh wangsa Syailendra. 
+                Candi ini terdiri dari enam teras berbentuk bujur sangkar dengan tiga pelataran melingkar di atasnya, memiliki sekitar 2.672 panel relief dan 504 arca Buddha.
+            </p>
+            <p>
+                Candi Borobudur diperkirakan selesai dibangun pada tahun 825 Masehi, dan pada tahun 1991 ditetapkan sebagai Situs Warisan Dunia UNESCO 
+                karena keindahan arsitekturnya serta nilai sejarah dan spiritualnya.
+            </p>
+
+            <h3>Arsitektur dan Makna Kosmologi</h3>
+            <p>
+                Struktur Borobudur menyerupai mandala yang melambangkan alam semesta dalam ajaran Buddha. 
+                Candi ini dibangun di atas bukit dengan tiga tingkatan filosofi:
+            </p>
+            <ul>
+                <li><b>Kāmadhātu</b> – ranah nafsu, melambangkan dunia bawah penuh keinginan.</li>
+                <li><b>Rupadhātu</b> – ranah berwujud, menggambarkan transisi menuju kesucian.</li>
+                <li><b>Arupadhātu</b> – ranah tak berwujud, puncak tertinggi menuju Nirwana.</li>
+            </ul>
+            <p>
+                Denah dasarnya berbentuk bujur sangkar sekitar 123 meter tiap sisinya dan memiliki ketinggian sekitar 35 meter (atau 42 meter termasuk stupa puncak).
+            </p>
+
+            <h3>Lingkungan dan Konteks</h3>
+            <p>
+                Borobudur berdiri di Dataran Kedu, daerah subur yang dikelilingi pegunungan — Sindoro, Sumbing, Merapi, Merbabu, dan perbukitan Menoreh. 
+                Di sekitarnya mengalir dua sungai besar, yaitu Sungai Progo dan Sungai Elo. 
+                Candi ini juga berada dalam satu garis lurus dengan dua candi lain, yaitu Candi Mendut dan Candi Pawon.
+            </p>
+
+            <h3>Sejarah Singkat</h3>
+            <p>
+                Pembangunan Borobudur diperkirakan berlangsung antara tahun 760 hingga 825 Masehi oleh Dinasti Syailendra. 
+                Setelah pusat kerajaan Medang berpindah ke Jawa Timur, Borobudur sempat ditinggalkan dan tertimbun abu vulkanik serta semak belukar.
+            </p>
+            <p>
+                Pada tahun 1814, Sir Thomas Stamford Raffles menemukan kembali candi ini dan memerintahkan pembersihan situs tersebut. 
+                Pemugaran besar-besaran dilakukan oleh Pemerintah Indonesia dan UNESCO pada tahun 1975–1982 untuk mengembalikan kejayaannya.
+            </p>
+
+            <h3>Aktivitas dan Fungsi Saat Ini</h3>
+            <p>
+                Kini, Borobudur tidak hanya menjadi objek wisata populer tetapi juga pusat kegiatan spiritual umat Buddha, terutama saat perayaan Waisak setiap tahun. 
+                Dari puncak candi, pengunjung dapat menikmati panorama Gunung Merapi dan perbukitan sekitar, terutama saat matahari terbit.
+            </p>
+
+            <h3>Aktivitas Populer</h3>
+            <ul>
+                <li>Menikmati matahari terbit dari puncak candi</li>
+                <li>Menjelajahi relief kisah kehidupan Buddha</li>
+                <li>Mengunjungi Museum Karmawibhangga</li>
+                <li>Tur sepeda keliling desa wisata sekitar Borobudur</li>
+            </ul>
+            
+            <div class="source-info">
+                <h2>Sumber Informasi:</h2>
+                <p>Data diambil dari: <a href="https://id.wikipedia.org/wiki/Borobudur" target="_blank">Wikipedia - Borobudur</a></p>
+            </div>
+            <a href="wisata budaya.html" class="btn-detail">← Kembali ke Destinasi</a>
+            <a href="kontak.html" class="btn-book">PESAN TUR BOROBUDUR SEKARANG</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 REALTOUR | Petualangan Impian Dalam Genggaman</p>
+    </footer>
+</body>
+</html>
