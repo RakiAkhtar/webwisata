@@ -134,7 +134,7 @@ header nav ul li{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
     cursor: pointer;
-    background-image: url(foto/aiindo.jpg);
+    background-image: url(foto/curugtermegah.jpg);
     background-size: cover; 
     background-position: center;
 }
@@ -921,4 +921,10 @@ footer {
 }
 .detail-insumatera {
     background-image: url(foto/sumaterabckimg.jpg); 
+}
+.detail-inskalimantan {
+    background-image: url(foto/kalimantanbckimg.jpg);
+}
+.detail-insnusatenggara {
+    background-image: url(foto/nusatenggarabckimg.jpg); 
 }
