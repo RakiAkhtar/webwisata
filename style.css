@@ -163,7 +163,7 @@ header nav ul li{
 
 /* Kontak */
 :root{
-  --accent: #c83a2b; 
+  --accent: #e60028; 
   --bg: #fff;
   --muted: #666;
   --radius: 10px;
@@ -399,7 +399,7 @@ header nav ul li{
 }
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #e60028;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -407,44 +407,44 @@ footer {
 }
 /*Wisata Alam*/
 .banner-alam {
-    background-color: #008080; 
+    background-color: #e60028; 
 }
 .content-alam h2 {
     font-size: 30px;
-    color: #008080; 
+    color: #e60028; 
     margin-bottom: 30px;
 }
 .content-alam .btn-detail {
-    background-color: #008080;
+    background-color: #e60028;
 }
 .content-alam .btn-detail:hover {
     background-color: #004d4d;
 }
 .destinasi-card .lokasi.alam {
-    color: #008080;
+    color: #e60028;
 }
 /* Wisata Kuliner*/
 .banner-kuliner {
-    background-color: #ff6347; 
+    background-color: #e60028; 
 }
 .content-kuliner h2 {
     font-size: 30px;
-    color: #ff6347; 
+    color: #e60028; 
     margin-bottom: 30px;
 }
 .content-kuliner .btn-detail {
-    background-color: #ff6347;
+    background-color: #e60028;
 }
 .content-kuliner .btn-detail:hover {
     background-color: #cc4f39;
 }
 .destinasi-card .lokasi.kuliner {
-    color: #ff6347;
+    color: #e60028;
 }
 /*Rekomendasi*/
 
 .banner-rekomendasi {
-    background-color: #3f51b5; 
+    background-color: #e60028; 
 }
 .content-rekomendasi {
     padding: 40px 20px;
@@ -453,7 +453,7 @@ footer {
 }
 .content-rekomendasi h2 {
     font-size: 32px;
-    color: #3f51b5;
+    color: #e60028;
     margin-top: 40px;
     margin-bottom: 20px;
     border-bottom: 2px solid #eee;
@@ -497,7 +497,7 @@ footer {
 }
 .detail-text h3 {
     font-size: 24px;
-    color: #3f51b5;
+    color: #e60028;
     margin-top: 0;
 }
 .detail-text p {
@@ -518,7 +518,7 @@ footer {
     color: #444;
 }
 .btn-rekomendasi {
-    background-color: #3f51b5;
+    background-color: #e60028;
     color: white;
     text-decoration: none;
     padding: 10px 25px;
@@ -536,7 +536,7 @@ footer {
 /* --- Wisata Populer --- */
 
 .banner-populer {
-    background-color: #f44336; 
+    background-color: #e60028; 
 }
 .content-populer {
     padding: 40px 20px;
@@ -545,7 +545,7 @@ footer {
 }
 .content-populer h2 {
     font-size: 32px;
-    color: #f44336; 
+    color: #e60028; 
     margin-top: 40px;
     margin-bottom: 20px;
     border-bottom: 2px solid #eee;
@@ -558,7 +558,7 @@ footer {
     flex-direction: row-reverse; 
 }
 .detail-populer h3 {
-    color: #f44336; 
+    color: #e60028; 
 }
 .detail-text ul li {
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10"><circle cx="5" cy="5" r="5" fill="%23f44336"/></svg>') no-repeat left center;
@@ -568,7 +568,7 @@ footer {
     color: #444;
 }
 .btn-populer {
-    background-color: #f44336; 
+    background-color: #e60028; 
     color: white;
     text-decoration: none;
     padding: 10px 25px;
@@ -821,11 +821,9 @@ footer {
     transition: color 0.2s;
     position: static;
 }
-
 .back p a:hover {
     color: #a00020;
 }
-/* Penambahan Galeri Foto Bali */
 .gallery-bali {
     margin-top: 40px;
 }
@@ -855,6 +853,53 @@ footer {
     object-fit: cover;
     display: block;
 }
+
+.makanan-khas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.makanan-khas li {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 0;
+}
+
+.makanan-khas li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.makanan-khas h3 {
+    color: #333;
+    margin-top: 0;
+    border-bottom: 3px dotted #e60028; 
+    padding-bottom: 8px;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.makanan-khas img {
+    width: 100%;
+    height: 180px; 
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 2px solid #e60028;
+}
+
+.makanan-khas p {
+    color: #555;
+    line-height: 1.6;
+}
 /* ... Kode CSS yang sudah ada ... */
 
 /* Background Khusus Pulau Jawa */
@@ -871,3 +916,9 @@ footer {
     background-image: url(foto/sulawesi_hero_bck.jpg);
 }
 */
+.detail-insulawesi {
+    background-image: url(foto/sulawesibckimg.jpg); 
+}
+.detail-insumatera {
+    background-image: url(foto/sumaterabckimg.jpg); 
+}
